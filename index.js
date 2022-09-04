@@ -412,7 +412,7 @@ const lookup = {
   'delta': 'Denver',
   'echo': 'Easy',
   'foxtrot': 'Frank'
-}
+};
   result = lookup[val];
   // Only change code above this line
   return result;
@@ -420,7 +420,22 @@ const lookup = {
 
 phoneticLookup("charlie");
 
-// 89
+// Число фибоначчи
+
+function fib(n) {
+  //return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+  let prev = 0;
+  let next = 1;
+
+  for(let i = 2; i < n; i++) {
+    let item = next;
+    next = prev + next;
+    prev = item;
+  }
+  return prev;
+}
+
+console.log( fib(77) );
 
 
 
